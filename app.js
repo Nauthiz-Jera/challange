@@ -24,9 +24,12 @@ const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error'));
 
+const staticFiles = express.static(path.join(__dirname, '../../client/build'));
+app.use(staticFiles);
+app.use('/*', staticFiles);
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+//app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'jade');
 
 app.set('port', process.env.PORT || 5000);
 const server = app.listen(app.get('port'), function() {
@@ -37,7 +40,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
