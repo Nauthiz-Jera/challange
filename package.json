@@ -2,7 +2,7 @@
     "name": "react-backend",
     "version": "0.0.0",
     "private": true,
-    "main": "index.js",
+    "main": "client/src/index.js",
     "scripts": {
         "start": "node ./bin/www",
         "build": "babel . --ignore node_modules,build --out-dir build",
