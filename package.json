@@ -4,7 +4,7 @@
     "private": true,
     "main": "index.js",
     "scripts": {
-        "start":"node ./bin/www",
+        "start": "node ./bin/www",
         "build": "babel . --ignore node_modules,build --out-dir build",
         "start:prod": "node build/server.js",
         "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
@@ -14,7 +14,6 @@
         "cookie-parser": "~1.4.3",
         "debug": "~2.6.3",
         "express": "~4.15.2",
-        "jade": "~1.11.0",
         "mongodb": "^2.2.31",
         "mongoose": "^4.11.7",
         "morgan": "~1.8.1",
