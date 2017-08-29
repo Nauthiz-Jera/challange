@@ -8,10 +8,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const staticFiles = express.static(path.join(__dirname, './client/build'));
 app.use(staticFiles);
-app.use('/*', staticFiles);
+app.use('/', staticFiles);
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 /* Routes */
