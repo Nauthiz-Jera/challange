@@ -91,7 +91,6 @@ class Widgets extends Component {
       selectedFinish,
       widgets,
       addToOrder,
-      order,
     } = this.props;
     function filterWidgets(category, size, finish) {
       return function(widgets) {

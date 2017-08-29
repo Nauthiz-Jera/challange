@@ -10,7 +10,6 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   let widgets;
-  let currentWidget;
   switch (action.type) {
     case FETCH_ALL_WIDGETS.SUCCESS:
       return {

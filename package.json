@@ -2,7 +2,7 @@
     "name": "react-backend",
     "version": "0.0.0",
     "private": true,
-    "main": "client/src/index.js",
+    "main": "index.js",
     "scripts": {
         "start": "node ./bin/www",
         "build": "babel . --ignore node_modules,build --out-dir build",
@@ -17,7 +17,6 @@
         "mongodb": "^2.2.31",
         "mongoose": "^4.11.7",
         "morgan": "~1.8.1",
-        "serve-favicon": "~2.4.2",
         "update-mongo": "0.0.4"
     },
     "engines": {
